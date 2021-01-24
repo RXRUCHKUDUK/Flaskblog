@@ -1,0 +1,20 @@
+{%  extends 'base.html' %}
+
+{% block title %}
+Biz haqimizda
+{% endblock %}
+
+{% block body %}
+<div class="container">
+
+<h1>Mavzu qo'shish</h1><br>
+    <form method="POST">
+        <input type="text" name="title" id="title" class="form-control" placeholder="Nomlanishi" ><br>
+        <textarea name="intro" id="intro" class="form-control" placeholder="Anons"></textarea><br>
+        <textarea name="text" id="text" class="form-control" placeholder="Asosiy tekst"></textarea><br>
+        <input type="submit" class="btn btn-success" value="Jo'natish"><br>
+    </form><br>
+</div>
+
+{% endblock %}
+    

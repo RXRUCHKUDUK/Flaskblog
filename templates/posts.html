@@ -1,0 +1,28 @@
+{%  extends 'base.html' %}
+
+{% block title %}
+Yangiliklar
+{% endblock %}
+
+{% block body %}
+<div class="container nt-5">
+
+    <h1>Yangiliklar</h1>
+
+    {% if articles|length > 0 %}
+    
+        {% for el in articles %}
+         <div class="alert alert-info">
+            <h2>{{ el.title }}</h2>
+             <p>{{ el.intro }}</p>
+            <p><b>Sana: {{ el.date.date() }}</b></p>
+            <a href="/posts/{{ el.id }}" class="btn btn-warning">To'liqroq</a>
+             </div>
+        {% endfor %}
+    {% else %}
+    <p>Bizda hali mavzular yo'q</p>
+    {% endif %}
+</div>
+
+{% endblock %}
+     

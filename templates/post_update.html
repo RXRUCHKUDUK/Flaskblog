@@ -1,0 +1,20 @@
+{%  extends 'base.html' %}
+
+{% block title %}
+Mavzuni yangilash
+{% endblock %}
+
+{% block body %}
+<div class="container">
+
+<h1>Mavzuni yangilash</h1>
+    <form method="POST">
+        <input type="text" name="title" id="title" class="form-control" value="{{ article.title }}" placeholder="Nomlanishi" ><br>
+        <textarea name="intro" id="intro" class="form-control" placeholder="Anons">{{ article.intro }}</textarea><br>
+        <textarea name="text" id="text" class="form-control" placeholder="Asosiy tekst">{{ article.text }}</textarea><br>
+        <input type="submit" class="btn btn-success" value="Yangilash"><br>
+    </form><br>
+</div>
+
+{% endblock %}
+    
